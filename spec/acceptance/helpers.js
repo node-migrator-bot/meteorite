@@ -9,7 +9,7 @@ var verbose = false;
 var cleanup = function(fn) {
   var root = Meteorite.root();
 
-  if (path.existsSync(root))
+  if (fs.existsSync(root))
     wrench.rmdirSyncRecursive(root);
 
   fn();
